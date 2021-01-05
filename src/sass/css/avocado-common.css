@@ -1,0 +1,82 @@
+.bg {
+  background: linear-gradient(116.82deg, #DDE777 0%, #C4DD48 100%);
+  /** background: linear-gradient(116.82deg, #BEF8EF 0%, #8DE3D7 100%) **/
+}
+
+.bg .container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 0 5em 0 5em;
+}
+
+.bg .container .avocado-common {
+  position: relative;
+  width: 100%;
+  top: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 70%;
+}
+
+.bg .container .avocado-common-text-block {
+  width: 55%;
+  -webkit-transition: left 5s;
+  transition: left 5s;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bg .container .avocado-common-text-block .text-descr {
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  /** align-content: space-between **/
+}
+
+.bg .container .avocado-common-text-block .text-descr .block__title {
+  width: 100%;
+}
+
+.bg .container .avocado-common-text-block .text-descr .block__description {
+  width: 100%;
+  margin-top: 3rem;
+  line-height: 2em;
+}
+
+.bg .container .avocado-common-text-block .block__btn {
+  position: relative;
+  margin-top: 1rem;
+  width: 100%;
+  height: 20%;
+}
+
+.bg .container .avocado-common-text-block .block__btn .more {
+  position: absolute;
+  cursor: pointer;
+  bottom: 0;
+}
+
+.bg .container .avocado-common-text-block .block__btn .more:hover {
+  text-decoration: underline;
+}
+
+.bg .container .avocado-common__img {
+  position: relative;
+  height: 100%;
+}
+/*# sourceMappingURL=avocado-common.css.map */

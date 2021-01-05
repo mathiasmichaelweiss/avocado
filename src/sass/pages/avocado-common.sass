@@ -1,0 +1,49 @@
+.bg
+    background: linear-gradient(116.82deg, #DDE777 0%, #C4DD48 100%)
+    /** background: linear-gradient(116.82deg, #BEF8EF 0%, #8DE3D7 100%) **/
+    .container
+        position: relative
+        max-width: 100%
+        margin: 0 auto
+        height: 100vh
+        padding: 0 5em 0 5em
+
+        .avocado-common
+            position: relative
+            width: 100%
+            top: 15%
+            display: flex
+            justify-content: space-between
+            height: 70%
+            &-text-block
+                width: 55%
+                transition: left 5s
+                position: relative
+                display: flex
+                flex-wrap: wrap
+                .text-descr
+                    height: 70%
+                    display: flex
+                    flex-wrap: wrap
+                    align-content: start
+                    /** align-content: space-between **/
+                    .block__title
+                        width: 100%
+                    .block__description
+                        width: 100%
+                        margin-top: 3rem
+                        line-height: 2em
+                .block__btn
+                    position: relative
+                    margin-top: 1rem
+                    width: 100%
+                    height: 20%
+                    .more
+                        position: absolute
+                        cursor: pointer
+                        bottom: 0
+                        &:hover
+                            text-decoration: underline
+            &__img
+                position: relative
+                height: 100%

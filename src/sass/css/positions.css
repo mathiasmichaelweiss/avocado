@@ -1,0 +1,15 @@
+.hideBlockLeft {
+  -webkit-animation: hiddeBlockLeft 3s linear forwards;
+          animation: hiddeBlockLeft 3s linear forwards;
+}
+
+.avocadoCenter {
+  -webkit-animation: avocadoCenter .5s linear forwards;
+          animation: avocadoCenter .5s linear forwards;
+}
+
+.maxWidth {
+  -webkit-animation: width100 .5s linear forwards;
+          animation: width100 .5s linear forwards;
+}
+/*# sourceMappingURL=positions.css.map */
