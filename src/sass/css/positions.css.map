@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,cAAc,CAAC;EACX,SAAS,EAAE,iCAAiC;CAAG;;AAEnD,AAAA,cAAc,CAAC;EACX,SAAS,EAAE,iCAAiC;CAAG;;AAEnD,AAAA,SAAS,CAAC;EACN,SAAS,EAAE,4BAA4B;CAAG",
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACX,SAAS,EAAE,iCAAiC;CAAG;;AAEnD,AAAA,UAAU,CAAC;EACP,OAAO,EAAE,CAAC;EACV,OAAO,EAAE,IAAI;CAAG",
     "sources": [
         "../utils/positions.sass"
     ],

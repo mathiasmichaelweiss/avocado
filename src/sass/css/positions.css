@@ -1,15 +1,10 @@
 .hideBlockLeft {
-  -webkit-animation: hiddeBlockLeft 3s linear forwards;
-          animation: hiddeBlockLeft 3s linear forwards;
+  -webkit-animation: hiddeBlockLeft 2s linear forwards;
+          animation: hiddeBlockLeft 2s linear forwards;
 }
 
-.avocadoCenter {
-  -webkit-animation: avocadoCenter .5s linear forwards;
-          animation: avocadoCenter .5s linear forwards;
-}
-
-.maxWidth {
-  -webkit-animation: width100 .5s linear forwards;
-          animation: width100 .5s linear forwards;
+.invisible {
+  opacity: 0;
+  display: none;
 }
 /*# sourceMappingURL=positions.css.map */
