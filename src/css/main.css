@@ -154,6 +154,7 @@
   100% {
     left: -350rem;
     opacity: 0;
+    display: none;
   }
 }
 
@@ -168,6 +169,7 @@
   100% {
     left: -350rem;
     opacity: 0;
+    display: none;
   }
 }
 
@@ -182,7 +184,7 @@
 }
 
 * {
-  font-size: 1.2vw;
+  font-size: 1.1vw;
 }
 
 body {

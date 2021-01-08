@@ -2,8 +2,7 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    const
-        moreBtn = document.querySelector('.more');
+    const moreBtn = document.querySelector('.more');
 
     // Рассчет сдвига авокадо на центр и изменения отступа у текстового блока
     const
@@ -70,7 +69,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             new DotBtnMenu(
                 'Что такое авокадо?',
-                '-47%',
+                '-40%',
                 '3%',
                 '0',
                 '3vw',
@@ -79,7 +78,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             new DotBtnMenu(
                 'Простые рецепты с авокадо',
-                '-77.5%',
+                '-68.5%',
                 '20%',
                 '1',
                 '6vw',
@@ -88,7 +87,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             new DotBtnMenu(
                 '8 научных фактов о пользе авокадо',
-                '-112.5%',
+                '-101.5%',
                 '49%',
                 '2',
                 '8vw',
@@ -108,7 +107,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             new DotBtnMenu(
                 'Вред авокадо',
-                '-27.5%',
+                '-24.5%',
                 '80%',
                 '4',
                 '1vw',
@@ -117,7 +116,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             new DotBtnMenu(
                 'Родина авокадо',
-                '95.5%',
+                '97.5%',
                 '60%',
                 '5',
                 '-13vw',
@@ -136,14 +135,14 @@ window.addEventListener('DOMContentLoaded', () => {
             const
                 menuText = document.querySelectorAll('.menu-text'),
                 menuCircle = document.querySelectorAll('.menu__circle'),
-                menuItem = document.querySelectorAll('.menu-item-container');
+                menuItemContainer = document.querySelectorAll('.menu-item-container');
 
-            menuItem.forEach(item => {
+            menuItemContainer.forEach(item => {
                 item.classList.add('invisible');
             });
 
             const loadTime2 = window.setTimeout(() => {
-                menuItem.forEach(item => {
+                menuItemContainer.forEach(item => {
                     item.classList.remove('invisible');
                 });
             }, 500);
@@ -161,8 +160,166 @@ window.addEventListener('DOMContentLoaded', () => {
                 });
             });
 
-            // Работа меню - переходы по навигации
-            
+            // Работа меню - переходы по навигации.avocado-common__img 
+            const
+                menuItem = document.querySelectorAll('.menu__circle'),
+                smallCircle = document.querySelectorAll('.menu__circle-inner-circle'),
+                mainContainer = document.querySelector('.container'),
+                containerInner = document.querySelector('.avocado-common '),
+                imgBlock = document.querySelector('.avocado-common__img ');
+
+
+
+            const homeland = {
+                title: 'Родина авокадо',
+                firstText: 'История авокадо началась в далёкой Мексике. 10 тысячелетий назад древние ацтеки собирали плоды авокадо в лесах и использовали их в качестве пищи. Позже они стали выращивать деревья авокадо вблизи своих жилищ, отбирая лучшие экземпляры. О культивировании авокадо в 500 г до н.э. свидетельствуют найденные при раскопках жилищ ацтеков семена авокадо,',
+                secondText: 'значительно превосходящие по размерам семена дикорастущих экземпляров. Ацтеки высоко ценили плоды авокада, обладающие высокими питательными качествами, и называли его “лесным маслом”. Они также приписывали авокадо свойства афродизиака, и по форме его плодов, напоминающих строение мужских органов, называли авокадо “ahuacaquahuitl”, что в переводе означает “яичковое дерево”.',
+                note: '*сейчас этот фрукт растет и в других странах с тропическим и субтропическим климатом: США, Бразилии, Израиле, африканских государствах.',
+                countries: {
+                    usa: 'src/img/homeland/usa.svg',
+                    mexico: 'src/img/homeland/Mexico.svg',
+                    brazil: 'src/img/homeland/Brazil.svg',
+                    africa: 'src/img/homeland/Africa.svg'
+                },
+                ps: {
+                    pSel1: '.avocado-common',
+                    pSel2: '.block__btn',
+                    pSel3: '.container'
+                }
+            };
+
+            const {
+                title,
+                firstText,
+                secondText,
+                note,
+                countries: {
+                    usa,
+                    mexico,
+                    brazil,
+                    africa
+                },
+                ps: {
+                    pSel1,
+                    pSel2,
+                    pSel3
+                }
+            } = homeland;
+
+            class HomelandPage {
+                constructor(title, text1, text2, text3, countrieUSA, countrieMexico, countrieBrazil, countrieAfrica, parentSelector, parentSelector2, parentSelector3) {
+                    this.title = title;
+                    this.text1 = text1;
+                    this.text2 = text2;
+                    this.text3 = text3;
+                    this.countrieUSA = countrieUSA;
+                    this.countrieMexico = countrieMexico;
+                    this.countrieBrazil = countrieBrazil;
+                    this.countrieAfrica = countrieAfrica;
+                    this.parent = document.querySelector(parentSelector);
+                    this.parent2 = document.querySelector(parentSelector2);
+                    this.parent3 = document.querySelector(parentSelector3);
+                }
+
+                render() {
+                    const
+                        textDescr = document.createElement('div'),
+                        textDescr2 = document.createElement('div'),
+                        note = document.createElement('div'),
+                        map = document.createElement('div');
+
+                    textDescr.classList.add('text-descr');
+                    textDescr2.classList.add('text-descr2');
+                    note.classList.add('note');
+                    map.classList.add('map');
+
+                    textDescr.innerHTML = `
+                            <div class="firstBlock">
+                                <h1 class="block__title2">
+                                ${this.title}
+                                </h1>
+                                <div class="block__description">
+                                    ${this.text1}
+                                </div>
+                            </div>
+                      `;
+
+                    textDescr2.innerHTML = `
+                        <div class="secondBlock">
+                            <div class="block__description">
+                            ${this.text2}
+                            </div>
+                        </div>
+                        `;
+
+                    note.innerHTML = `
+                            <div class="block__description">
+                                ${this.text3}
+                            </div>
+                        `;
+
+                    map.innerHTML = `
+                            <div class="usa-mexico">
+                                <div class="usa">
+                                    <img src=${this.countrieUSA} alt="">
+                                </div>
+                                <div class="mexico">
+                                    <img src=${this.countrieMexico} alt="">
+                                </div>
+                            </div>
+                            <div class="africa">
+                                <img src=${this.countrieAfrica} alt="">
+                            </div>
+                            <div class="brazil">
+                                <img src=${this.countrieBrazil} alt="">
+                            </div>
+                        `;
+
+                    this.parent.prepend(textDescr);
+                    this.parent.append(textDescr2);
+                    this.parent2.append(map);
+                    this.parent.append(note);
+                }
+            }
+
+
+
+            menuItem.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    const target = e.target;
+
+                    menuItemContainer.forEach(item => {
+                        item.remove();
+                    });
+
+                    if (target == menuItem[5] || target.classList.contains('menu__circle-inner-circle') && target == smallCircle[5]) {
+                        new HomelandPage(
+                            `${title}`,
+                            `${firstText}`,
+                            `${secondText}`,
+                            `${note}`,
+                            `${usa}`,
+                            `${mexico}`,
+                            `${brazil}`,
+                            `${africa}`,
+                            `${pSel1}`,
+                            `${pSel2}`,
+                            `${pSel3}`
+                        ).render();
+
+                        document.querySelector('.avocado-common-text-block').remove();
+
+                        document.querySelector('.avocado-common__img').style = 'width: 25%; position: inherit; position: static';
+
+                        document.querySelector('.block__title2').style = 'margin-bottom:  2vw;';
+                        document.querySelector('.text-descr').style = 'width: 37.5%; line-height: 2.5vw;';
+                        document.querySelector('.text-descr2').style = 'width: 37.5%; line-height: 2.5vw;';
+                        document.querySelector('.note').style = ' line-height: 2.5vw;';
+
+                        containerInner.style = 'display: flex;  flex-wrap: wrap; width: 100%; justify-content: start;';
+                    }
+                });
+            });
         }
         moveAvocadoToCenter();
 
