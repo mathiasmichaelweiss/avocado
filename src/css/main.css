@@ -87,7 +87,7 @@
   -webkit-transition: right .5s linear;
   transition: right .5s linear;
   right: 0;
-  width: 25%;
+  width: 28%;
 }
 
 .bg .container .avocado-common__img img {
@@ -173,6 +173,46 @@
   }
 }
 
+@-webkit-keyframes showBlockLeft {
+  0% {
+    left: -120rem;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes showBlockLeft {
+  0% {
+    left: -120rem;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .hideBlockLeft {
   -webkit-animation: hiddeBlockLeft 2s linear forwards;
           animation: hiddeBlockLeft 2s linear forwards;
@@ -181,6 +221,73 @@
 .invisible {
   opacity: 0;
   display: none;
+}
+
+.showBlockLeftFast {
+  -webkit-animation: showBlockLeft .5s linear forwards;
+          animation: showBlockLeft .5s linear forwards;
+}
+
+.showBlockLeftMedium {
+  -webkit-animation: showBlockLeft 1s linear forwards;
+          animation: showBlockLeft 1s linear forwards;
+}
+
+.showBlockLeftSlow {
+  -webkit-animation: showBlockLeft 1.5s linear forwards;
+          animation: showBlockLeft 1.5s linear forwards;
+}
+
+.visible {
+  -webkit-animation: visible 1s linear forwards;
+          animation: visible 1s linear forwards;
+}
+
+.text-descr2 {
+  position: relative;
+  -webkit-transition: opacity 1s ease-in, left 1s ease-in;
+  transition: opacity 1s ease-in, left 1s ease-in;
+  left: -120rem;
+  opacity: 0;
+}
+
+.text-descr3 {
+  position: relative;
+  -webkit-transition: opacity 1s ease-in, left 1s ease-in;
+  transition: opacity 1s ease-in, left 1s ease-in;
+  left: -120rem;
+  opacity: 0;
+}
+
+.note {
+  position: relative;
+  -webkit-transition: opacity 1s ease-in, left 1s ease-in;
+  transition: opacity 1s ease-in, left 1s ease-in;
+  left: -120rem;
+  opacity: 0;
+}
+
+.map {
+  opacity: 0;
+}
+
+.countries {
+  -webkit-transition: -webkit-transform .5s ease-in;
+  transition: -webkit-transform .5s ease-in;
+  transition: transform .5s ease-in;
+  transition: transform .5s ease-in, -webkit-transform .5s ease-in;
+}
+
+.countries:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  z-index: 100;
+}
+
+.countries:hover svg path {
+  -webkit-transition: fill 1s;
+  transition: fill 1s;
+  fill: #595E00;
 }
 
 * {

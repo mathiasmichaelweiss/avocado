@@ -1,0 +1,47 @@
+.text-descr2 {
+  position: relative;
+  -webkit-transition: opacity 1s ease-in, left 1s ease-in;
+  transition: opacity 1s ease-in, left 1s ease-in;
+  left: -120rem;
+  opacity: 0;
+}
+
+.text-descr3 {
+  position: relative;
+  -webkit-transition: opacity 1s ease-in, left 1s ease-in;
+  transition: opacity 1s ease-in, left 1s ease-in;
+  left: -120rem;
+  opacity: 0;
+}
+
+.note {
+  position: relative;
+  -webkit-transition: opacity 1s ease-in, left 1s ease-in;
+  transition: opacity 1s ease-in, left 1s ease-in;
+  left: -120rem;
+  opacity: 0;
+}
+
+.map {
+  opacity: 0;
+}
+
+.countries {
+  -webkit-transition: -webkit-transform .5s ease-in;
+  transition: -webkit-transform .5s ease-in;
+  transition: transform .5s ease-in;
+  transition: transform .5s ease-in, -webkit-transform .5s ease-in;
+}
+
+.countries:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  z-index: 100;
+}
+
+.countries:hover svg path {
+  -webkit-transition: fill 1s;
+  transition: fill 1s;
+  fill: #595E00;
+}
+/*# sourceMappingURL=avocado-homeland.css.map */
