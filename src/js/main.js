@@ -403,6 +403,8 @@ window.addEventListener('DOMContentLoaded', () => {
         moveAvocadoToCenter();
 
         function createMenuOnAvocado() {}
+
+        const x = 123;
     });
 
 
