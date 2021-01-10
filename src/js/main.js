@@ -292,12 +292,11 @@ window.addEventListener('DOMContentLoaded', () => {
                         item.style = 'transition: opacity 1s; opacity: 0;';
                     });
 
-                    /* item.style.opacity = '0'; */
-
                     const loadTime3 = window.setTimeout(() => {
 
                         menuItemContainer.forEach(item => {
-                            item.remove();
+                            /* item.remove(); */
+                            item.classList.add('none');
                         });
 
                         if (target == menuItem[5] || target.classList.contains('menu__circle-inner-circle') && target == smallCircle[5]) {
@@ -390,21 +389,55 @@ window.addEventListener('DOMContentLoaded', () => {
 
                         }
 
+                        const loadTime4 = window.setTimeout(() => {
+                            const avocadoMap = document.querySelector('.map');
+                            avocadoMap.classList.add('visible');
+                            const menuClose = document.createElement('div');
+                            menuClose.classList.add('menu__close');
+                            menuClose.innerHTML = `
+                                 <div class="menu__close-inner-circle">
+                                        <div class="cross"></div>
+                                 </div>
+                            `;
+                            avocadoMap.prepend(menuClose);
+                            menuClose.style =
+                                'left: 12vw; top: 3.1vw;';
+
+                            document.querySelector('.menu__close').addEventListener('click', () => {
+
+                                document.querySelector('.text-descr2')
+                                    .remove();
+                                document.querySelector('.text-descr3')
+                                    .remove();
+                                document.querySelector('.note')
+                                    .remove();
+                                document.querySelector('.map')
+                                    .remove();
+                                document.querySelector('.avocado-common__img')
+                                    .style = `
+                                            left: ${whatAShift};
+                                            width: 23.73%;
+                                        `;
+
+                                menuItemContainer.forEach(item => {
+                                    item.classList.remove('none');
+                                });
+                                menuItem.forEach(item => {
+                                    item.style = 'transition: opacity 1s; opacity: 1;';
+                                });
+
+                            });
+
+                        }, 1500);
+
                     }, 500);
 
-                    const loadTime4 = window.setTimeout(() => {
-                        const avocadoMap = document.querySelector('.map');
-                        avocadoMap.classList.add('visible');
-                    }, 1500);
-
                 });
+
             });
         }
         moveAvocadoToCenter();
 
-        function createMenuOnAvocado() {}
-
-        const x = 123;
     });
 
 

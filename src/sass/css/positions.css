@@ -27,4 +27,8 @@
   -webkit-animation: visible 1s linear forwards;
           animation: visible 1s linear forwards;
 }
+
+.none {
+  display: none;
+}
 /*# sourceMappingURL=positions.css.map */
